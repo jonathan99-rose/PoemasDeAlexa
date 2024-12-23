@@ -8,7 +8,7 @@ const poems = [
         title: "Poema 2: 'Juntos por Siempre'",
         content: `Junto a ti, siempre estaremos, <br>En tormentas y sol, pase lo que pase. <br>En tus brazos, mi mundo es tranquilo, <br>Contigo para siempre, mi corazón está cálido.`
     },
-    // Add more poems as you wish
+    // Add more poems here
 ];
 
 // Function to generate the poem pages
@@ -35,9 +35,11 @@ function generatePages() {
 
 // Page navigation logic
 let currentPage = 0;
-const pages = document.querySelectorAll('.page');
+let pages;
 
 function turnPage(direction) {
+    pages = document.querySelectorAll('.page');
+
     // Remove "flipped" class from the current page
     pages[currentPage].classList.remove('active');
     pages[currentPage].classList.add('flipped');
