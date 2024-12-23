@@ -1,0 +1,76 @@
+/* Body styling */
+body {
+    font-family: 'Georgia', serif;
+    background: #f8f8f8 url('https://cdn.pixabay.com/photo/2015/12/11/16/44/rose-1081741_960_720.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #6a2c2a;
+    text-align: center;
+    margin: 0;
+}
+
+/* Book Container */
+.book-container {
+    width: 80%;
+    height: 500px;
+    margin: 50px auto;
+    position: relative;
+    perspective: 1000px;
+}
+
+/* Page Styles */
+.page {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    transform-origin: left center;
+    backface-visibility: hidden;
+    transition: transform 1s ease-in-out;
+}
+
+/* Active page */
+.page.active {
+    transform: rotateY(0deg);
+}
+
+/* Flipped page */
+.page.flipped {
+    transform: rotateY(-180deg);
+}
+
+/* Poem Title */
+.poem-title {
+    font-size: 24px;
+    color: #e60000;
+    margin-bottom: 10px;
+}
+
+/* Previous and Next buttons */
+button {
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: #e60000;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c50000;
+}
+
+/* Roses decoration */
+.roses-decor {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+    background: url('https://cdn.pixabay.com/photo/2017/02/23/14/26/rose-2092380_960_720.png') no-repeat;
+    background-size: contain;
+}
